@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+    <script>
+        let numbers = parseInt(prompt("Nhập số lượng số nguyên tố"));
+        let N = 3;
+        let hienThi = 2;
+        let kiemtra = true;
+        let count = 1;
+        let i;
+        while (count < numbers){
+            for (i = 2; i < N; i++){
+                if (N%i === 0){
+                    kiemtra = false;
+                }
+            }
+            if (kiemtra){
+                hienThi += (" " + N);
+                count++;
+            }
+            kiemtra = true;
+            N++;
+        }
+        document.write(numbers + " số nguyên tố đầu tiên là : " + hienThi);
+    </script>
+</body>
+</html>
